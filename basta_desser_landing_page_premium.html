@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basta Desser | Haute Couture Sucrée à Domicile</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display (Serif dramatique) & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Configuration Tailwind Thème Cinématique Sombre & Or -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cinematic: {
+                            gold: '#dfb260',
+                            goldHover: '#c89947',
+                            obsidian: '#0a0603', /* Chocolat noir de nuit */
+                            stone: '#150f0b',
+                            card: '#1c1511',
+                            goldGlow: 'rgba(223, 178, 96, 0.15)'
+                        },
+                        accent: {
+                            whatsapp: '#25D366',
+                            whatsappHover: '#20ba5a'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Effet de brume lumineuse dorée cinématographique */
+        .gold-glow {
+            box-shadow: 0 0 40px 0 rgba(223, 178, 96, 0.15);
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #ffe3ad 0%, #dfb260 50%, #9e7528 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .border-gold-gradient {
+            border-image: linear-gradient(to right, #9e7528, #dfb260, #9e7528) 1;
+        }
+        /* Custom Scrollbar sombre */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0603;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2d2017;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #dfb260;
+        }
+    </style>
+</head>
+<body class="bg-cinematic-obsidian text-stone-100 font-sans selection:bg-cinematic-gold/20 selection:text-cinematic-gold pb-24 lg:pb-0">
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-cinematic-obsidian/90 backdrop-blur-xl border-b border-cinematic-stone/80 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo d'Auteur -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-cinematic-gold to-yellow-800 flex items-center justify-center text-cinematic-obsidian shadow-lg shadow-cinematic-gold/20 transform group-hover:rotate-12 transition-all">
+                    <i class="fa-solid fa-cookie-bite text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-widest block leading-none text-gradient-gold">BASTA</span>
+                    <span class="text-[9px] tracking-[0.3em] font-extrabold uppercase text-cinematic-gold block mt-1">L'atelier de nuit</span>
+                </div>
+            </a>
+
+            <!-- Liens de navigation élégants -->
+            <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold text-gray-400">
+                <a href="#atelier" class="hover:text-cinematic-gold transition-colors">L'atelier</a>
+                <a href="#creations" class="hover:text-cinematic-gold transition-colors">Les créations</a>
+                <a href="#gourmets" class="hover:text-cinematic-gold transition-colors">Témoignages</a>
+            </nav>
+
+            <!-- CTA Direct WhatsApp -->
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/212658793023?text=Bonjour%20Basta%20Desser,%20je%20souhaite%20réserver%20une%20création%20pour%20ce%20soir." target="_blank" 
+                   class="bg-accent-whatsapp hover:bg-accent-whatsappHover text-white px-5 py-2.5 rounded-full font-bold transition-all flex items-center gap-2 text-xs uppercase tracking-wider">
+                    <i class="fab fa-whatsapp text-base"></i>
+                    <span>Privé : 06 58 79 30 23</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Théâtrale / Cinématique) -->
+    <section class="relative min-h-[90vh] flex items-center justify-center py-20 overflow-hidden">
+        <!-- Arrière-plan cinématique avec ombres et lueurs -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(40,24,15,0.4)_0%,rgba(10,6,3,1)_80%)]"></div>
+            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=40" 
+                 alt="Arrière-plan dessert premium" 
+                 class="w-full h-full object-cover opacity-20 filter blur-[2px] scale-105">
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 relative z-10 text-center space-y-8">
+            <span class="inline-flex items-center gap-2 bg-cinematic-gold/10 text-cinematic-gold text-[10px] font-extrabold px-4 py-2 rounded-full uppercase tracking-[0.25em] border border-cinematic-gold/20">
+                <i class="fa-solid fa-crown"></i> Sur réservation exclusive
+            </span>
+
+            <h1 class="text-5xl sm:text-6xl lg:text-8xl font-serif font-bold text-white leading-tight tracking-tight">
+                L'interdit a désormais <br>
+                <span class="text-gradient-gold font-serif italic">un goût.</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+                Aucun compromis. Aucun prix affiché. Uniquement l'excellence de matières premières d'exception préparées à la demande pour quelques privilégiés. Réservez votre coffret ce soir.
+            </p>
+
+            <!-- Boutons d'actions théâtraux -->
+            <div class="flex flex-col sm:flex-row gap-5 justify-center pt-4">
+                <a href="#creations" class="bg-gradient-to-r from-cinematic-gold to-yellow-600 hover:from-yellow-600 hover:to-cinematic-gold text-cinematic-obsidian text-sm font-extrabold px-10 py-5 rounded-full transition-all tracking-[0.15em] uppercase shadow-lg shadow-cinematic-gold/20 hover:scale-105 transform">
+                    <i class="fa-solid fa-magnifying-glass-chart mr-2"></i> Découvrir la carte éphémère
+                </a>
+                <a href="https://wa.me/212658793023?text=Bonjour%20Basta%20Desser,%20je%20souhaite%20réserver%20une%20création%20pour%20ce%20soir." target="_blank" 
+                   class="bg-white/5 hover:bg-white/10 text-white text-sm font-bold px-10 py-5 rounded-full border border-white/10 transition-all tracking-[0.15em] uppercase flex items-center justify-center gap-3">
+                    <i class="fab fa-whatsapp text-lg text-accent-whatsapp"></i> Concierge WhatsApp
+                </a>
+            </div>
+
+            <!-- Assurance VIP -->
+            <div class="flex flex-wrap justify-center items-center gap-8 pt-10 text-xs text-gray-400 font-semibold tracking-wider">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-clock text-cinematic-gold"></i> Livraison rapide sur rendez-vous</span>
+                <span class="text-cinematic-gold/40">•</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-handshake text-cinematic-gold"></i> Remise en main propre discrète</span>
+                <span class="text-cinematic-gold/40">•</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-cinematic-gold"></i> Confection sur-mesure</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Concept : L'Artisanat de Luxe -->
+    <section id="atelier" class="py-24 bg-cinematic-stone relative border-y border-cinematic-card">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Image conceptuelle mystérieuse -->
+                <div class="relative group">
+                    <div class="absolute -inset-1.5 bg-gradient-to-tr from-cinematic-gold to-yellow-900 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative rounded-[2.5rem] overflow-hidden aspect-[4/3] border-2 border-cinematic-gold/20">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Geste de cuisine artistique" 
+                             class="w-full h-full object-cover transition-transform duration-750 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cinematic-obsidian/70 to-transparent"></div>
+                    </div>
+                </div>
+
+                <!-- Descriptif -->
+                <div class="space-y-8">
+                    <span class="text-cinematic-gold uppercase tracking-[0.25em] text-xs font-extrabold block">L'Incomparable Signature</span>
+                    <h2 class="text-4xl font-serif font-semibold text-white">Créations nées de l'obscurité et de la passion.</h2>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Chez **Basta Desser**, chaque douceur est conçue comme un chef-d’œuvre éphémère. Nous n’avons pas de vitrine physique, pas de stock de masse. Nos desserts d'auteur voyagent directement de nos mains d'or à votre table.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-cinematic-gold/10 flex items-center justify-center text-cinematic-gold shrink-0 mt-1"><i class="fa-solid fa-cookie"></i></div>
+                            <div>
+                                <h4 class="font-serif font-bold text-white text-lg">Zéro Stock, Zéro Gâchis</h4>
+                                <p class="text-sm text-gray-400">Chaque tiramisu, chaque fondant est préparé à la commande pour une fraîcheur maximale.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-cinematic-gold/10 flex items-center justify-center text-cinematic-gold shrink-0 mt-1"><i class="fa-solid fa-magnifying-glass-dollar"></i></div>
+                            <div>
+                                <h4 class="font-serif font-bold text-white text-lg">Confidentialité & Prestige</h4>
+                                <p class="text-sm text-gray-400">Pas de transaction publique complexe. Vous discutez avec le créateur directement par WhatsApp.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Carte Éphémère (Sans prix) -->
+    <section id="creations" class="py-24 bg-cinematic-obsidian">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-cinematic-gold uppercase tracking-[0.25em] text-xs font-extrabold">Sélectionnez vos désirs</span>
+                <h2 class="text-4xl font-serif font-semibold text-white">Le Cabinet des Douceurs</h2>
+                <div class="w-16 h-[2px] bg-cinematic-gold mx-auto mt-2"></div>
+                <p class="text-gray-400 text-sm font-light">Cochez les créations que vous souhaitez inclure dans votre coffret privilège et envoyez votre demande instantanée.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+                
+                <!-- Colonne de sélection de produits (Prend 2 colonnes sur large) -->
+                <div class="lg:col-span-2 space-y-6">
+                    
+                    <!-- Dessert 1 -->
+                    <div onclick="toggleSelection(0)" id="card-0" class="group bg-cinematic-card hover:bg-cinematic-stone p-6 rounded-[2rem] border border-white/5 hover:border-cinematic-gold/30 transition-all duration-300 flex flex-col sm:flex-row gap-6 cursor-pointer relative overflow-hidden">
+                        <div class="w-full sm:w-44 h-44 rounded-2xl overflow-hidden relative shrink-0">
+                            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tiramisu Royal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-cinematic-gold text-cinematic-obsidian text-[9px] font-extrabold px-3 py-1 rounded-full uppercase tracking-widest">Édition Limitée</span>
+                        </div>
+                        <div class="flex-grow flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-serif text-2xl font-bold text-white group-hover:text-cinematic-gold transition-colors">L'Original Tiramisu Classico</h3>
+                                    <!-- Checkbox stylisée -->
+                                    <div id="check-0" class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center transition-all">
+                                        <i class="fa-solid fa-check text-xs text-cinematic-obsidian opacity-0"></i>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-400 leading-relaxed font-light">
+                                    Mascarpone noble et crémeux, biscuits cuillères artisanaux imbibés d'un authentique café d'Ethiopie fraîchement moulu, fine poudre de cacao grand cru.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-2 mt-4 text-[10px] uppercase tracking-wider font-extrabold text-cinematic-gold/80">
+                                <span><i class="fa-solid fa-star"></i> Crème de Mascarpone Extra-Frais</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dessert 2 -->
+                    <div onclick="toggleSelection(1)" id="card-1" class="group bg-cinematic-card hover:bg-cinematic-stone p-6 rounded-[2rem] border border-white/5 hover:border-cinematic-gold/30 transition-all duration-300 flex flex-col sm:flex-row gap-6 cursor-pointer relative overflow-hidden">
+                        <div class="w-full sm:w-44 h-44 rounded-2xl overflow-hidden relative shrink-0">
+                            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="L'Or Vert Pistache" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-cinematic-gold text-cinematic-obsidian text-[9px] font-extrabold px-3 py-1 rounded-full uppercase tracking-widest">Le Préféré</span>
+                        </div>
+                        <div class="flex-grow flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-serif text-2xl font-bold text-white group-hover:text-cinematic-gold transition-colors">L'Or Vert - Tiramisu Pistache</h3>
+                                    <div id="check-1" class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center transition-all">
+                                        <i class="fa-solid fa-check text-xs text-cinematic-obsidian opacity-0"></i>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-400 leading-relaxed font-light">
+                                    Une explosion de saveurs italiennes avec notre pâte de pistache pure de Bronte, éclats croquants torréfiés et ganache de chocolat blanc.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-2 mt-4 text-[10px] uppercase tracking-wider font-extrabold text-cinematic-gold/80">
+                                <span><i class="fa-solid fa-leaf"></i> Véritable Pistache de Sicile</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dessert 3 -->
+                    <div onclick="toggleSelection(2)" id="card-2" class="group bg-cinematic-card hover:bg-cinematic-stone p-6 rounded-[2rem] border border-white/5 hover:border-cinematic-gold/30 transition-all duration-300 flex flex-col sm:flex-row gap-6 cursor-pointer relative overflow-hidden">
+                        <div class="w-full sm:w-44 h-44 rounded-2xl overflow-hidden relative shrink-0">
+                            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Le Fondant Royal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-red-800 text-white text-[9px] font-extrabold px-3 py-1 rounded-full uppercase tracking-widest">Servi Chaud</span>
+                        </div>
+                        <div class="flex-grow flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-serif text-2xl font-bold text-white group-hover:text-cinematic-gold transition-colors">Le Lava Fondant Cœur d'Or</h3>
+                                    <div id="check-2" class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center transition-all">
+                                        <i class="fa-solid fa-check text-xs text-cinematic-obsidian opacity-0"></i>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-400 leading-relaxed font-light">
+                                    Moelleux au chocolat noir intense belge abritant un coeur coulant volcanique de pistache ou de praliné noisette maison.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-2 mt-4 text-[10px] uppercase tracking-wider font-extrabold text-cinematic-gold/80">
+                                <span><i class="fa-solid fa-fire"></i> Coeur Coulant d'Exception</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dessert 4 -->
+                    <div onclick="toggleSelection(3)" id="card-3" class="group bg-cinematic-card hover:bg-cinematic-stone p-6 rounded-[2rem] border border-white/5 hover:border-cinematic-gold/30 transition-all duration-300 flex flex-col sm:flex-row gap-6 cursor-pointer relative overflow-hidden">
+                        <div class="w-full sm:w-44 h-44 rounded-2xl overflow-hidden relative shrink-0">
+                            <img src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Latte Speculoos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex-grow flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-serif text-2xl font-bold text-white group-hover:text-cinematic-gold transition-colors">Shaker Éclipse - Nectar Speculoos</h3>
+                                    <div id="check-3" class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center transition-all">
+                                        <i class="fa-solid fa-check text-xs text-cinematic-obsidian opacity-0"></i>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-400 leading-relaxed font-light">
+                                    Sublime boisson shaker veloutée à base de lait crémeux, éclats de spéculoos croustillants et d’une pointe d’épices mystérieuses.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-2 mt-4 text-[10px] uppercase tracking-wider font-extrabold text-cinematic-gold/80">
+                                <span><i class="fa-solid fa-ice-cream"></i> Idéal pour accompagner nos desserts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Formulaire de Réservation Directe (Sidebar Sticky) -->
+                <div class="w-full">
+                    <div class="bg-cinematic-card p-8 rounded-[2rem] border border-cinematic-gold/25 sticky top-28 space-y-6 shadow-2xl gold-glow">
+                        <div class="text-center pb-4 border-b border-white/5">
+                            <h3 class="font-serif text-2xl font-semibold text-white">Votre Sélection</h3>
+                            <p class="text-xs text-gray-400 mt-1">Créez votre expérience haute couture</p>
+                        </div>
+
+                        <!-- Liste de ce qu'il a choisi -->
+                        <div id="selectedDisplayList" class="space-y-4">
+                            <!-- Rempli par JS -->
+                            <div class="text-center py-8 text-gray-500 text-sm">
+                                <i class="fa-solid fa-candy-cane text-3xl mb-3 text-cinematic-gold/30 block"></i>
+                                Aucun dessert sélectionné.<br>Cliquez sur les créations pour composer votre commande.
+                            </div>
+                        </div>
+
+                        <!-- CTA final unique vers WhatsApp -->
+                        <button onclick="sendReservation()" id="whatsappSubmitBtn" disabled 
+                                class="w-full bg-stone-800 text-gray-500 font-bold py-4 rounded-xl flex items-center justify-center gap-3 transition-all cursor-not-allowed">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                            <span>Réserver via WhatsApp</span>
+                        </button>
+
+                        <div class="pt-4 border-t border-white/5 space-y-3">
+                            <div class="flex items-center gap-3 text-xs text-gray-400">
+                                <i class="fa-solid fa-lock text-cinematic-gold"></i>
+                                <span>Canal de réservation privé et sécurisé</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-400">
+                                <i class="fa-solid fa-truck text-cinematic-gold"></i>
+                                <span>Livraison express à domicile ou bureau</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Preuve Sociale Haute Couture -->
+    <section id="gourmets" class="py-24 bg-cinematic-stone">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-cinematic-gold uppercase tracking-[0.25em] text-xs font-extrabold">Paroles de Gourmets</span>
+                <h2 class="text-4xl font-serif font-semibold text-white">Une Confiance Aveugle</h2>
+                <div class="w-16 h-[2px] bg-cinematic-gold mx-auto mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Avis 1 -->
+                <div class="bg-cinematic-card p-8 rounded-[2rem] border border-white/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 text-cinematic-gold mb-6">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed italic font-light">
+                            "Une merveille absolue. Commander par WhatsApp est d'une discrétion incroyable, le livreur m'a apporté le tiramisu royal dans un écrin magnifique. Le goût est tout simplement impérial."
+                        </p>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4 border-t border-white/5 pt-4">
+                        <div class="w-11 h-11 rounded-full bg-cinematic-gold/10 overflow-hidden border border-cinematic-gold/30">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Myriam A." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Myriam A.</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-cinematic-gold">Casablanca</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avis 2 -->
+                <div class="bg-cinematic-card p-8 rounded-[2rem] border border-white/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 text-cinematic-gold mb-6">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed italic font-light">
+                            "Le fondant au chocolat est extraordinaire. Le contraste entre le cœur pistache de Sicile et la puissance du cacao belge est divin. On sent qu'aucun ingrédient n'est négligé."
+                        </p>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4 border-t border-white/5 pt-4">
+                        <div class="w-11 h-11 rounded-full bg-cinematic-gold/10 overflow-hidden border border-cinematic-gold/30">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Youssef K." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Youssef K.</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-cinematic-gold">Rabat Prestige</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avis 3 -->
+                <div class="bg-cinematic-card p-8 rounded-[2rem] border border-white/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 text-cinematic-gold mb-6">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed italic font-light">
+                            "C'est la troisième fois que je commande pour des dîners de famille et à chaque fois, c'est l'unanimité. L'absence de prix publics renforce encore l'aspect unique de l'expérience."
+                        </p>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4 border-t border-white/5 pt-4">
+                        <div class="w-11 h-11 rounded-full bg-cinematic-gold/10 overflow-hidden border border-cinematic-gold/30">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Salma T." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Salma T.</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-cinematic-gold">Marrakech Oasis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barre de Commande Mobile ultra-simplifiée -->
+    <div id="mobileCartDrawer" class="fixed bottom-0 left-0 w-full bg-cinematic-card/95 backdrop-blur-md border-t border-cinematic-gold/20 p-4 z-50 md:hidden shadow-[0_-10px_20px_rgba(0,0,0,0.5)] transform translate-y-full transition-transform duration-300">
+        <div class="max-w-md mx-auto flex items-center justify-between gap-4">
+            <div>
+                <p class="text-[9px] uppercase tracking-widest font-extrabold text-cinematic-gold">Réservation active</p>
+                <p id="mobileSelectionCount" class="text-sm font-bold text-white">0 Créations</p>
+            </div>
+            <button onclick="sendReservation()" id="mobileWhatsappSubmitBtn" disabled 
+                    class="bg-stone-800 text-gray-500 font-bold px-6 py-4 rounded-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider flex-grow cursor-not-allowed">
+                <i class="fab fa-whatsapp text-lg"></i>
+                <span>Créer mon coffret</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Pied de Page de Marque -->
+    <footer class="bg-cinematic-obsidian text-gray-500 pt-20 pb-12 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6 space-y-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 border-b border-white/5 pb-12">
+                <div class="flex flex-col items-center md:items-start text-center md:text-left gap-2">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-cinematic-gold flex items-center justify-center text-cinematic-obsidian">
+                            <i class="fa-solid fa-cookie-bite text-sm"></i>
+                        </div>
+                        <span class="font-serif text-2xl font-bold tracking-widest text-gradient-gold">BASTA DESSER</span>
+                    </div>
+                    <p class="text-xs text-gray-400 max-w-sm leading-relaxed font-light">
+                        Atelier de Haute Confiserie et Desserts d’Exception à la commande.
+                    </p>
+                </div>
+
+                <!-- Réseaux VIP -->
+                <div class="flex flex-col items-center md:items-end gap-4">
+                    <p class="text-xs font-bold uppercase tracking-widest text-cinematic-gold">Rejoindre le cercle privé</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-cinematic-stone hover:bg-cinematic-gold hover:text-cinematic-obsidian flex items-center justify-center text-gray-300 transition-colors border border-white/5"><i class="fab fa-instagram text-lg"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-cinematic-stone hover:bg-cinematic-gold hover:text-cinematic-obsidian flex items-center justify-center text-gray-300 transition-colors border border-white/5"><i class="fab fa-tiktok text-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 gap-4">
+                <p>&copy; 2026 BASTA DESSER. Confectionné pour connaisseurs.</p>
+                <p class="flex items-center gap-2">
+                    <span>Ligne directrice : 06 58 79 30 23</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- BASE DE DONNÉES DES PRODUITS ---
+        const products = [
+            {
+                id: 0,
+                name: "L'Original Tiramisu Classico",
+                tagline: "Café d'Ethiopie & Mascarpone Noble"
+            },
+            {
+                id: 1,
+                name: "L'Or Vert - Tiramisu Pistache",
+                tagline: "Pure Pistache de Sicile & Éclats Croquants"
+            },
+            {
+                id: 2,
+                name: "Le Lava Fondant Cœur d'Or",
+                tagline: "Volcan Chocolat Belge & Cœur Coulant Pistache"
+            },
+            {
+                id: 3,
+                name: "Shaker Éclipse - Nectar Speculoos",
+                tagline: "Onctuosité Spéculoos & Épices Secrètes"
+            }
+        ];
+
+        // --- ÉTAT DE LA SÉLECTION ---
+        let selectedProducts = new Set();
+        const whatsappNumber = "212658793023"; // 0658793023 formaté pour l'API internationale sans le "+"
+
+        // --- TOGGLE DES CRÉATIONS ---
+        function toggleSelection(id) {
+            const card = document.getElementById(`card-${id}`);
+            const checkbox = document.getElementById(`check-${id}`);
+            
+            if (selectedProducts.has(id)) {
+                // Déselection
+                selectedProducts.delete(id);
+                card.classList.remove('border-cinematic-gold/60', 'bg-cinematic-stone');
+                card.classList.add('border-white/5', 'bg-cinematic-card');
+                if (checkbox) {
+                    checkbox.classList.remove('bg-cinematic-gold', 'border-cinematic-gold');
+                    checkbox.classList.add('border-white/20');
+                    checkbox.querySelector('i').classList.add('opacity-0');
+                }
+            } else {
+                // Sélection
+                selectedProducts.add(id);
+                card.classList.add('border-cinematic-gold/60', 'bg-cinematic-stone');
+                card.classList.remove('border-white/5', 'bg-cinematic-card');
+                if (checkbox) {
+                    checkbox.classList.add('bg-cinematic-gold', 'border-cinematic-gold');
+                    checkbox.classList.remove('border-white/20');
+                    checkbox.querySelector('i').classList.remove('opacity-0');
+                }
+            }
+
+            updateSelectionUI();
+        }
+
+        // --- MISE À JOUR DE L'INTERFACE DE SÉLECTION ---
+        function updateSelectionUI() {
+            const listContainer = document.getElementById('selectedDisplayList');
+            const submitBtn = document.getElementById('whatsappSubmitBtn');
+            const mobileSubmitBtn = document.getElementById('mobileWhatsappSubmitBtn');
+            const mobileSelectionCount = document.getElementById('mobileSelectionCount');
+            const mobileCartDrawer = document.getElementById('mobileCartDrawer');
+            
+            if (selectedProducts.size === 0) {
+                listContainer.innerHTML = `
+                    <div class="text-center py-8 text-gray-500 text-sm">
+                        <i class="fa-solid fa-candy-cane text-3xl mb-3 text-cinematic-gold/30 block"></i>
+                        Aucun dessert sélectionné.<br>Cliquez sur les créations pour composer votre commande.
+                    </div>
+                `;
+                
+                // Désactiver les boutons de validation
+                submitBtn.disabled = true;
+                submitBtn.className = "w-full bg-stone-800 text-gray-500 font-bold py-4 rounded-xl flex items-center justify-center gap-3 transition-all cursor-not-allowed";
+                
+                mobileSubmitBtn.disabled = true;
+                mobileSubmitBtn.className = "bg-stone-800 text-gray-500 font-bold px-6 py-4 rounded-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider flex-grow cursor-not-allowed";
+                mobileSelectionCount.innerText = "0 Créations";
+
+                // Masquer le drawer mobile
+                mobileCartDrawer.classList.add('translate-y-full');
+                return;
+            }
+
+            // Génération de la liste des items choisis
+            let listHtml = '';
+            selectedProducts.forEach(id => {
+                const product = products[id];
+                listHtml += `
+                    <div class="flex items-center justify-between py-2 border-b border-white/5">
+                        <div>
+                            <p class="text-sm font-bold text-white">${product.name}</p>
+                            <p class="text-[10px] text-cinematic-gold font-light">${product.tagline}</p>
+                        </div>
+                        <button onclick="toggleSelection(${id}); event.stopPropagation();" class="text-xs text-red-500/70 hover:text-red-500 transition-colors"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                `;
+            });
+
+            listContainer.innerHTML = listHtml;
+
+            // Activer les boutons de validation
+            submitBtn.disabled = false;
+            submitBtn.className = "w-full bg-gradient-to-r from-cinematic-gold to-yellow-600 hover:from-yellow-600 hover:to-cinematic-gold text-cinematic-obsidian font-bold py-4 rounded-xl flex items-center justify-center gap-3 transition-all cursor-pointer shadow-lg shadow-cinematic-gold/15";
+
+            // Mobile Drawer
+            mobileSubmitBtn.disabled = false;
+            mobileSubmitBtn.className = "bg-gradient-to-r from-cinematic-gold to-yellow-600 text-cinematic-obsidian font-bold px-6 py-4 rounded-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider flex-grow cursor-pointer shadow-lg";
+            mobileSelectionCount.innerText = `${selectedProducts.size} Création${selectedProducts.size > 1 ? 's' : ''}`;
+
+            // Afficher le drawer mobile
+            mobileCartDrawer.classList.remove('translate-y-full');
+        }
+
+        // --- ENVOYER LA DEMANDE DE RÉSERVATION SUR WHATSAPP ---
+        function sendReservation() {
+            if (selectedProducts.size === 0) return;
+
+            let message = "🌟 *DEMANDE DE RÉSERVATION DE CRÉATION - BASTA DESSER* 🌟\n\n";
+            message += "Bonjour, je souhaite réserver un coffret d'exception contenant :\n";
+            message += "--------------------------------------\n";
+
+            selectedProducts.forEach(id => {
+                const product = products[id];
+                message += `✨ *${product.name}*\n   _${product.tagline}_\n\n`;
+            });
+
+            message += "--------------------------------------\n";
+            message += "Merci de me recontacter pour confirmer la disponibilité et planifier l'heure de livraison exclusive.\n\n";
+            message += "📍 *Mon adresse pour ce soir* :\n👉 [Entrez votre adresse ici]";
+
+            const encodedMessage = encodeURIComponent(message);
+            const targetUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            window.open(targetUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
